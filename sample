@@ -1,0 +1,36 @@
+import java.util.Properties;
+import java.io.InputStream;
+
+for (int i = 0; i < dataContext.getDataCount(); i++) 
+{
+InputStream is = dataContext.getStream(i);
+Properties props = dataContext.getProperties(i);
+
+// Retrieve the value of the current DDP named "worktype" and "sub-vendor"
+WORK_TYPE1 = props.getProperty("document.dynamic.userdefined.WORK_TYPE");
+SUB_VENDOR1 = props.getProperty("document.dynamic.userdefined.SUB_VENDOR");
+
+
+}
+if(WORK_TYPE1 =='REPAIRS' && SUB_VENDOR1 == 'NO')
+{
+	if(ServiceCenter=='ALSTOM')
+	{
+		xid = SDNo.concat(SD_PO_SO_No)
+	}
+	else(ServiceCenter=='GE')
+	{
+		xid - JOB_No.replaceAll("\\s","")
+	}
+}
+else(WORK_TYPE1 =='REPAIRS' && SUB_VENDOR1 == '')
+{
+	if(ServiceCenter=='ALSTOM')
+	{
+		xid = SDNo.concat(SD_PO_SO_No)
+	}
+	else(ServiceCenter=='GE')
+	{
+		xid - JOB_No.replaceAll("\\s","")
+	}
+}
